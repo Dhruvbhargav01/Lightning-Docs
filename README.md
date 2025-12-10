@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Lightning Docs
 
-## Getting Started
+A secure document storage and text-extraction application built with Next.js and Supabase that allows users to upload PDF files, store them safely, and read extracted text inside a smooth, authenticated dashboard.
+Live application: https://pdfvault.vercel.app/
 
-First, run the development server:
+Screenshots
 
-```bash
+1. Home - <img width="1920" height="1080" alt="Screenshot 2025-12-10 151729" src="https://github.com/user-attachments/assets/6196b65d-032f-4dcd-909c-2dcc61cbf69e" />
+2. Signup - <img width="1920" height="1080" alt="Screenshot 2025-12-10 151749" src="https://github.com/user-attachments/assets/a0013413-c6de-483b-a86d-87bd8a89a7fe" />
+3. Dashboard - <img width="1920" height="1080" alt="Screenshot 2025-12-10 151817" src="https://github.com/user-attachments/assets/e1085568-b39d-4a19-83a3-4708c25d843b" />
+
+Features
+
+Secure Google Authentication powered by Supabase Auth
+
+PDF upload with support for files up to 10 MB
+
+Automatic extraction and storage of text content from uploaded PDFs
+
+Clean dashboard to view, read, download, and delete stored documents
+
+Modern interface built using shadcn/ui and Tailwind CSS
+
+Tech Stack
+
+Framework: Next.js 15 (App Router)
+
+Authentication: Supabase Auth
+
+Storage: Supabase Storage
+
+UI Components: shadcn/ui
+
+Styling: Tailwind CSS
+
+Language: TypeScript
+
+Getting Started
+Prerequisites
+
+Node.js 18 or higher
+
+A Supabase account + configured project
+
+Environment Variables
+
+Create a .env.local file in the root of the project and include:
+
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+
+You can find these inside your Supabase project dashboard under API settings.
+
+Installation
+
+Clone the repository
+
+Install dependencies
+
+npm install
+
+
+Start the dev server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit http://localhost:3000
+ to use the application
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Usage
 
-## Learn More
+Sign in using Google on the homepage
 
-To learn more about Next.js, take a look at the following resources:
+Upload PDF files from the dashboard
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+View extracted text in the document viewer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Download or delete documents directly from the dashboard
